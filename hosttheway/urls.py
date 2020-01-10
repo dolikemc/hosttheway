@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.conf.urls import include
-from django.views.generic import RedirectView
+from django.views.generic import RedirectView, TemplateView
 from django.urls import path
 from django.contrib import admin
 from django.contrib.staticfiles.storage import staticfiles_storage
@@ -13,6 +13,7 @@ from search import views as search_views
 
 urlpatterns = [
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico')), name='favicon'),
+    path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
     path('django-admin/', admin.site.urls),
 
     path('admin/', include(wagtailadmin_urls)),
