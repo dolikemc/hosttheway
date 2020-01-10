@@ -11,6 +11,9 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hosttheway.settings.dev")
+if os.environ.get('USERPROFILE').startswith('C:'):
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hosttheway.settings.dev")
+else:
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hosttheway.settings.production")
 
 application = get_wsgi_application()
