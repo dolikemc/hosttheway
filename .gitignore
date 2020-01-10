@@ -130,6 +130,6 @@ dmypy.json
 
 # wagtail stuff
 .idea
-static
+/static
 media
 db.sqlite3
