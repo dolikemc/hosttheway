@@ -12,13 +12,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read_default_file': '/var/www/ssd123/priv/hosttheway/db.conf',
+            'read_default_file': '/var/www/ssd1470/priv/hosttheway/db.conf',
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
 }
 
-STATIC_ROOT = '/var/www/ssd123/htdocs/hosttheway/static/'
+STATIC_ROOT = '/var/www/ssd1470/htdocs/hosttheway/static/'
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = '/var/www/ssd1470/htdocs/hosttheway/media/'
