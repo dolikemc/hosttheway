@@ -3,7 +3,7 @@ import os
 import sys
 
 if __name__ == "__main__":
-    if os.environ.get('USERPROFILE').startswith('C:'):
+    if os.environ.get('USERPROFILE','').startswith('C:'):
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hosttheway.settings.dev")
     else:
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hosttheway.settings.production")
