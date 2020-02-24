@@ -11,6 +11,7 @@ from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
 from place.views import PlaceListCreate
+from frontend.views import index
 
 urlpatterns = [
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico')), name='favicon'),
@@ -23,6 +24,7 @@ urlpatterns = [
     path('search/', search_views.search, name='search'),
 
     path('api/place/', PlaceListCreate.as_view(), name='view_places'),
+    path('', index, name='index'),
     # For anything not caught by a more specific rule above, hand over to
     # Wagtail's page serving mechanism. This should be the last pattern in
     # the list:

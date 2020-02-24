@@ -133,3 +133,6 @@ dmypy.json
 /static
 media
 db.sqlite3
+gdal.bat
+/frontend/static/frontend/main.js
+

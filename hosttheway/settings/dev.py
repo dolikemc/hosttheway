@@ -13,7 +13,7 @@ ALLOWED_HOSTS = ['*']
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 if os.name in ('nt'):
-    GDAL_LIBRARY_PATH = r'C:\OSGeo4W\bin\gdal111.dll'
+    GDAL_LIBRARY_PATH = r'C:\Users\buchetmc\PycharmProjects\GIT\hosttheway\venv4\Lib\site-packages\osgeo\gdal300.dll'
 else:
     GDAL_LIBRARY_PATH = ''
 
